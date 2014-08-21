@@ -1,6 +1,0 @@
-#!/bin/sh
-
-for f in *.sh
-do
-	echo $f
-done

@@ -1,7 +1,15 @@
-#!/bin/sh
+#!/bin/bash
+
+# A script to write the following:
+# 0 a b ... i
+# 0 1 a ... h
+# .
+# .
+# .
+# 0 1 2 ... 9
 
 a=0;
-alpha=( a b c d e f g h i )
+alpha=(a b c d e f g h i)
 count=0 
 echo
 while [ "$a" -lt 10 ]
