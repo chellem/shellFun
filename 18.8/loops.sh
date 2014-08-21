@@ -15,7 +15,7 @@ loop1(){
 	done
 }
 
-loop9(){
+loop3(){
 	i=0
 	end=10
 	while [ $i -lt $end ]
