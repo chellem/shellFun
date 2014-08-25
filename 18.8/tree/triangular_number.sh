@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# something with triangular numbers
+
 a=$1
 c=""
 max=$2
@@ -16,12 +18,9 @@ do
 		line=$b
 	fi
 
-
-	#echo $b
 	while [ "$b" -ge 1 -a "$b" -lt "$line"  ]
 	do
 		c="*${c}"
-		#$((b--))
 		b=`expr "$b" - 1`
 	done
 	

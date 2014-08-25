@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# the loop where all start
+
 a=0
 
 while [ "$a" -lt 10 ]
