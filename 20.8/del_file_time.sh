@@ -10,7 +10,7 @@ delFile(){
 }
 
 case "$time" in
-    "10:37PM") delFile
+    "10:00PM") delFile
     ;;
     "11:00PM") delFile
     ;;
