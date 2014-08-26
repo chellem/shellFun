@@ -1,12 +1,11 @@
 #!/bin/sh
 
 a=0
-var="1"
+fill="1"
 VALUE=$1
-SYMBOL="$2"
 ONE=1
 
-tri(){
+reverse(){
 	c=""
 	for z in $(seq 0 $1)
 	do
@@ -38,16 +37,11 @@ do
 	b="$VALUE"
 	while [ "$b" -gt 0 ]
 	do
-		if [ -z "$SYMBOL" ]
-		then
-			echo -n "$b "
-		else
-			echo -n "$SYMBOL "
-		fi
+		echo -n "$b "
 		b=`expr $b - 1`
 	done
-	len=`expr length $var`
-	tri $ONE $VALUE
+	len=`expr length $fill`
+	reverse $ONE $VALUE
 	VALUE=`expr $VALUE - 1`
 	ONE=`expr $ONE + 1`
 done
