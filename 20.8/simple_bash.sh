@@ -27,7 +27,7 @@ do
 		then
                 	(( count = $count + 1))
 		fi
-        done
+    done
 	if [ $count -gt 0 ]
 	then
 		alpha[$count - 1]=""
