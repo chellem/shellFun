@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# three loops in one script, used in functions
+# usage: ./loops.sh 0..3
+# example: ./loops.sh 1
+
 loop0(){
 	for i in 1 2 3 4 5
 	do
