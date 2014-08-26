@@ -1,27 +1,34 @@
 #!/bin/sh
-#
 
 a=0
 var="1"
-
-alpha(){
-	c=1
-	len=$1
-	while [ "$c" -le $len ]
-	do
-		f=`expr substr $var $c 1`
-		echo -n "$f "
-		c=`expr $c + 1`
-	done
-	if [ -n $var ]
-	then
-		len=`expr $len - 1`
-		var=$var"1"
-	fi
-}
-
 VALUE=$1
 SYMBOL="$2"
+ONE=1
+
+tri(){
+	c=""
+	for z in $(seq 0 $1)
+	do
+		if [ "$z" -gt 0 ]
+		then
+			c="1 $c"
+		fi
+	done
+	zz=`expr $1 - 2`
+	for z in $(seq 0 $zz)
+	do
+		c="$c 1"
+	done
+	b=2
+	while [ "$b" -le $2 ]
+	do
+		c="$c $b"
+		b=`expr $b + 1`
+	done
+	echo $c
+}
+
 if [ -z "$VALUE" ]
 then
 	VALUE=6;
@@ -40,18 +47,7 @@ do
 		b=`expr $b - 1`
 	done
 	len=`expr length $var`
-	alpha $len
-	c=2
-	while [ "$c" -le 6 ]
-	do
-		if [ -z "$SYMBOL" ]
-		then
-			echo -n "$c "
-		else
-			echo -n "$SYMBOL "
-		fi
-		c=`expr $c + 1`
-	done
-	echo
+	tri $ONE $VALUE
 	VALUE=`expr $VALUE - 1`
+	ONE=`expr $ONE + 1`
 done

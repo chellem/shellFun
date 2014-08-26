@@ -20,7 +20,7 @@ do
 
 	while [ "$b" -ge 1 -a "$b" -lt "$line"  ]
 	do
-		c="*${c}"
+		c="1${c}"
 		b=`expr "$b" - 1`
 	done
 	
