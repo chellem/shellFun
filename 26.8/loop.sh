@@ -1,11 +1,9 @@
 #!/bin/sh
-
 a=0
 fill="1"
 VALUE=$1
 ONE=1
-
-reverse(){
+reverse() {
 	c=""
 	for z in $(seq 0 $1)
 	do

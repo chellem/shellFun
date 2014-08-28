@@ -1,0 +1,15 @@
+#/bin/sh
+
+if [ -f "$2/$1" ]
+then
+	echo "File name already exist in dir"
+	read -p "Do you want to overwrite it? >" input
+	if [ "$input" = "n" -o "$input" = "N" ]
+	then
+		exit 1
+	fi
+fi
+
+mv "$1" "$2"
+
+echo "$2" "$1" > .recover
