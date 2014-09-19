@@ -1,0 +1,8 @@
+#!/bin/sh
+
+for f in `find . -name "*.sh"`
+do
+	cat "$f" | sed 's/\r$//' > "$f"
+done
+
+echo '\r removed in all sh files'
