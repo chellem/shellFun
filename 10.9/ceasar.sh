@@ -1,7 +1,7 @@
 #!/bin/sh
 
-#usage: encrypt: ./encypt.sh 2 hello n
-#usage: decrypt: ./encypt.sh 2 khoor r
+#usage: encrypt: ./ceasar.sh 2 hello n
+#usage: decrypt: ./ceasar.sh 2 khoor r
 
 reverse=$3
 if [ -z $reverse ]
