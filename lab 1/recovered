@@ -1,6 +1,0 @@
-#/bin/sh
-
-files=$(cat .recovered)
-
-echo "recovered from "
-echo $files | tr " " " -> "
