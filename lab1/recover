@@ -1,0 +1,6 @@
+#/bin/sh
+
+mv $(cat .recover)
+cat .recover >> .recovered
+rm -f .recover
+

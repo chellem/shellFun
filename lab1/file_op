@@ -1,0 +1,29 @@
+#/bin/sh
+
+
+operation(){
+	echo $1
+	case "$1" in
+    		"save") ./save "$2" "$3"
+    		;;
+    		"restore") ./recover "$2"
+    		;;
+	esac
+}
+
+
+while [ 1 = 1 ]
+do
+	echo "Enter your operation:"
+	echo "1. save <file>"
+	echo "2. recover <file>"
+	echo "3. quit"
+	echo
+	read CMD FILE DIR
+        if [ $CMD = "quit" ]
+        then
+        	exit 1
+        fi
+
+	operation $CMD $FILE $DIR
+done
